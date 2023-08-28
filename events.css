@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Poppins:ital,wght@0,300;1,200&family=Roboto:wght@300;400&display=swap");
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+/* working on the gray path section  */
+.path {
+  width: 100%;
+  background-color: rgb(233, 233, 233);
+}
+.path .content {
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+.path .content h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .path .content {
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+/* working on the latest event  */
+.events-area {
+  width: 100%;
+}
+.events-area .latest-event {
+  width: 80%;
+  margin: 30px auto;
+  background-color: rgb(47, 47, 47);
+  display: flex;
+}
+
+.latest-event .photo {
+  width: 50%;
+  height: 100%;
+  overflow-y: hidden;
+}
+.latest-event img {
+  width: 100%;
+  height: auto;
+  margin-bottom: -7px;
+}
+
+.latest-event .content {
+  margin: 30px 20px;
+  color: white;
+  width: 50%;
+}
+.latest-event .content a {
+  text-decoration: none;
+  color: white;
+}
+.latest-event .content a:hover {
+  color: #0066c0;
+}
+.latest-event .content .datetime {
+  display: flex;
+}
+.latest-event .content .time {
+  margin-left: 20px;
+}
+.latest-event .content .description {
+  width: 90%;
+  margin-top: 20px;
+}
+@media screen and (max-width: 700px) {
+  .events-area .latest-event {
+    flex-direction: column;
+    width: 90%;
+  }
+  .latest-event .content {
+    width: 100%;
+  }
+  .latest-event .photo {
+    width: 100%;
+  }
+}
+
+/* working on the all events section  */
+.allEvents-area {
+  width: 100%;
+}
+.allEvents-area .allEvents {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.allEvents-area .allEvents .event-box {
+  width: 30%;
+  min-width: 300px;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(241, 241, 241);
+}
+.event-box .photo {
+  width: 100%;
+  height: auto;
+}
+.event-box .photo img {
+  width: 100%;
+}
+.event-box .content {
+  height: auto;
+  width: 100%;
+}
+.event-box .content .all-my-content {
+  width: 90%;
+  margin: 10px auto;
+}
+.event-box .content .all-my-content a {
+  text-decoration: none;
+  color: black;
+}
+.event-box .content .all-my-content a:hover {
+  color: #0066c0;
+}
+.event-box .content .all-my-content .datetime {
+  display: flex;
+}
+.event-box .content .time {
+  margin-left: 20px;
+}
+.event-box .content .all-my-content .description {
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .allEvents-area .allEvents {
+    width: 100%;
+    justify-content: center;
+  }
+  .allEvents-area .allEvents .event-box {
+    width: 90%;
+    min-width: none;
+  }
+}

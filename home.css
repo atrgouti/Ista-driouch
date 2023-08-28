@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Poppins:ital,wght@0,300;1,200&family=Roboto:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.myNavBar {
+  width: 100%;
+}
+/* .slider {
+  z-index: -2;
+  position: relative;
+}
+.slider img {
+  width: 100%;
+}
+.myNavBar.active .slider img {
+  filter: brightness(0.7);
+}
+@media screen and (max-width: 700px) {
+  .slider {
+    position: static;
+  }
+} */
+
+/* working on the fixed image  */
+.myFixedBg {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.myFixedBg img {
+  width: 100%;
+}
+.myNavBar.active .myFixedBg img {
+  filter: brightness(0.7);
+}
+@media screen and (max-width: 700px) {
+  .myNavBar .myFixedBg img {
+    width: 180%;
+  }
+}
+
+/* working on the options  */
+.options {
+  width: 80%;
+  margin: 0px auto;
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  max-width: 1800px;
+}
+/* fix me  */
+/* .myNavBar.active .options {
+  filter: brightness(0.7);
+} */
+.options .box {
+  /* height: 350px; */
+  margin: 60px 0px;
+  width: 250px;
+  min-width: 100px;
+  overflow-y: hidden;
+  border-radius: 10px;
+}
+
+.options .box1 img {
+  width: 100%;
+}
+.options .box p {
+  text-align: center;
+}
+.options .box .title {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.options .box .title a {
+  text-decoration: none;
+  color: black;
+}
+.options .box .title a:hover {
+  color: #0470cc;
+}
+.options .box .description {
+  color: rgb(121, 121, 121);
+  margin-top: 10px;
+}
+.options .box .readMore {
+  margin-top: 10px;
+  padding-bottom: 30px;
+}
+.options .box .readMore a {
+  text-decoration: none;
+  color: rgb(121, 121, 121);
+  text-transform: uppercase;
+}
+.options .box .readMore a:hover {
+  color: #0470cc;
+}
+@media screen and (max-width: 700px) {
+  .options {
+    flex-direction: column;
+    width: 80%;
+  }
+  .options .box {
+    width: 100%;
+    margin: 20px 0px;
+    height: 400px;
+  }
+}
+
+/* working on the welcome section  */
+.welcomeToIsta {
+  width: 100%;
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.myNavBar.active .welcomeToIsta {
+  filter: brightness(0.7);
+}
+
+.welcomeToIsta h1 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+.welcomeToIsta p {
+  width: 60%;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  color: rgb(67, 67, 67);
+  max-width: 1200px;
+}
+.welcomeToIsta h2 {
+  font-weight: bold;
+}
+.welcomeToIsta h5 {
+  color: rgb(67, 67, 67);
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 700px) {
+  .welcomeToIsta p {
+    width: 90%;
+  }
+}
+
+/* working on the news and events section  */
+.newsEvents {
+  width: 80%;
+  height: 100%;
+  margin: 50px auto;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  max-width: 1800px;
+}
+.news {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.firstNews {
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+.firstNews .info {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.firstNews .info h1 {
+  padding: 20px 0px;
+}
+.firstNews .info h1 a {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.firstNews .info h1 a:hover {
+  color: #0470cc;
+}
+.firstNews .info p {
+  width: 90%;
+}
+.firstNews .info h4 {
+  padding: 20px 0px;
+}
+.firstNews .info h4 a {
+  text-decoration: none;
+  color: gray;
+}
+.firstNews .info h4 a:hover {
+  color: #0470cc;
+}
+.firstNews .image {
+  width: 50%;
+  height: 100%;
+}
+.firstNews .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.secendNews {
+  height: 50%;
+  width: 100%;
+
+  display: flex;
+}
+.secendNews .info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.secendNews .info h1 {
+  padding: 20px 0px;
+}
+.secendNews .info h1 a {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.secendNews .info h1 a:hover {
+  color: #0470cc;
+}
+.secendNews .info p {
+  width: 90%;
+}
+.secendNews .info h4 {
+  padding: 20px 0px;
+}
+.secendNews .info h4 a {
+  text-decoration: none;
+  color: gray;
+}
+.secendNews .info h4 a:hover {
+  color: #0470cc;
+}
+.secendNews .image {
+  width: 50%;
+  height: 100%;
+}
+.secendNews .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.events {
+  width: 35%;
+  background-color: rgb(31, 31, 31);
+  display: flex; /* Use flex display */
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.events .inside {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  /* align-items: center; */
+}
+.events .inside::before {
+  content: "";
+  flex-grow: 1;
+}
+.events .inside .myEvent h4 {
+  padding-top: 40px;
+  color: white;
+  width: 80%;
+  margin: 0px auto;
+}
+.events .inside .myEvent h4 a {
+  text-decoration: none;
+  color: white;
+}
+.events .inside .myEvent h4 a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.events .inside .myEvent .dateAndTime {
+  display: flex;
+  color: rgb(201, 201, 201);
+  width: 80%;
+  margin: 0px auto;
+  font-size: 13px;
+}
+.events .inside .eventline {
+  width: 80%;
+  margin: 20px auto;
+  background-color: rgb(201, 201, 201);
+  height: 2px;
+}
+.events .inside .viewEvents {
+  width: 80%;
+  margin: 20px auto;
+}
+.events .inside .viewEvents a {
+  text-decoration: none;
+  color: rgb(224, 224, 224);
+}
+.events .inside .viewEvents a:hover {
+  color: rgb(176, 176, 176);
+}
+@media screen and (max-width: 700px) {
+  .newsEvents {
+    flex-direction: column;
+  }
+  .news {
+    width: 100%;
+    height: 50%;
+  }
+  .events {
+    width: 100%;
+  }
+  .events .inside {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: start;
+  }
+  .events .inside::before {
+    content: "";
+    flex-grow: 1;
+  }
+  .firstNews {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .firstNews .info {
+    width: 100%;
+    height: 50%;
+  }
+  .firstNews .info p {
+    width: 100%;
+  }
+  .secendNews .info p {
+    width: 100%;
+  }
+  .firstNews .image {
+    width: 100%;
+    height: 50%;
+  }
+  .secendNews {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .secendNews .info {
+    width: 100%;
+    height: 50%;
+  }
+  .secendNews .image {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+/* working on the testimonials  */
+.Testimonials {
+  display: flex;
+  background-color: #202828;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Testimonials h1 {
+  margin: 20px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+.Testimonials .boxes {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  max-width: 1800px;
+}
+.Testimonials .box {
+  position: relative;
+  width: 30%;
+  min-width: 100px;
+  background-color: #4c5c5c;
+  max-width: 1800px;
+  /* padding: 0px 40px; */
+}
+.Testimonials .box img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 30px;
+}
+.Testimonials .box .review {
+  width: 90%;
+  margin: 30px auto;
+  color: rgb(237, 237, 237);
+  font-family: serif;
+  font-size: 18px;
+}
+.Testimonials .box .name {
+  font-size: 20px;
+  font-weight: bold;
+  width: 90%;
+  margin: 0px auto;
+  color: rgb(237, 237, 237);
+}
+.Testimonials .box .feild {
+  font-size: 14px;
+  width: 90%;
+  margin: 0px auto;
+  color: rgb(237, 237, 237);
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 700px) {
+  .Testimonials .boxes {
+    flex-direction: column;
+    width: 100%;
+  }
+  .Testimonials .box {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+
+/* working on the collaboration  */
+.collaboration {
+  width: 100%;
+}
+.collaboration .title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: rgb(31, 31, 31);
+}
+.collaboration .boxes {
+  width: 80%;
+  margin: 0px auto;
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  max-width: 1800px;
+}
+/* fix me  */
+/* .myNavBar.active .collaboration {
+  filter: brightness(0.7);
+} */
+.collaboration .box {
+  /* height: 350px; */
+  margin: 60px 0px;
+  width: 250px;
+  min-width: 100px;
+  overflow-y: hidden;
+  border-radius: 10px;
+}
+
+.collaboration .box1 img {
+  width: 100%;
+}
+.collaboration .box p {
+  text-align: center;
+}
+.collaboration .box .title {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.collaboration .box .title a {
+  text-decoration: none;
+  color: black;
+}
+.collaboration .box .title a:hover {
+  color: #0470cc;
+}
+.collaboration .box .description {
+  color: rgb(121, 121, 121);
+  margin-top: 10px;
+}
+.collaboration .box .readMore {
+  margin-top: 10px;
+  padding-bottom: 30px;
+}
+.collaboration .box .readMore a {
+  text-decoration: none;
+  color: rgb(121, 121, 121);
+  text-transform: uppercase;
+}
+.collaboration .box .readMore a:hover {
+  color: #0470cc;
+}
+@media screen and (max-width: 700px) {
+  .collaboration .boxes {
+    flex-direction: column;
+    width: 80%;
+  }
+  .collaboration .box {
+    width: 100%;
+    margin: 20px 0px;
+    height: 400px;
+  }
+}
+
+/* working on the copy right  */
+.copyRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(222, 222, 222);
+}
+.copyRight p {
+  padding: 20px;
+}

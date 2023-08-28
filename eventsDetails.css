@@ -1,0 +1,73 @@
+main {
+  width: 100%;
+}
+
+/* working on the image and details section  */
+main header {
+  width: 80%;
+  margin: 0px auto;
+
+  display: flex;
+  margin-top: 80px;
+  gap: 20px;
+}
+header .preview {
+  width: 65%;
+  overflow-y: hidden;
+}
+header .preview img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+header .details {
+  width: 35%;
+  height: auto;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 30px;
+}
+header .details p {
+  margin-top: 40px;
+}
+header .details p label {
+  font-weight: bold;
+}
+header .details p span {
+  margin-left: 40px;
+}
+@media screen and (max-width: 700px) {
+  main header {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 0;
+  }
+  header .preview {
+    width: 90%;
+  }
+  header .preview img {
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  header .details {
+    border-radius: 15px;
+    width: 90%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
+/* working on the main section where are the details  */
+main section {
+  width: 80%;
+  margin: 30px auto;
+}
+main section h1 {
+  font-weight: bold;
+}
+main section .description {
+  width: 100%;
+  margin-top: 30px;
+  line-height: 30px;
+}

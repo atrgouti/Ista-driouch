@@ -1,0 +1,102 @@
+/* working on the gray path section  */
+.path {
+  width: 100%;
+  background-color: rgb(233, 233, 233);
+}
+.path .content {
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+.path .content h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .path .content {
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+/* working on the get in touch text  */
+main {
+  width: 100%;
+}
+main .getInTouch {
+  width: 80%;
+  margin: 40px auto;
+}
+main .getInTouch p {
+  font-size: 18px;
+  margin-top: 20px;
+  width: 65%;
+  color: rgb(158, 158, 158);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 30px;
+}
+
+/* working on the form  */
+main section {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+main section form {
+  width: 65%;
+  background-color: rgb(233, 233, 233);
+  padding: 20px;
+}
+main section form .nameEmail {
+  display: flex;
+  justify-content: space-between;
+}
+main section form input {
+  margin-bottom: 20px;
+}
+main section form .nameEmail input {
+  width: 47%;
+  padding: 10px 20px;
+  border: none;
+}
+main section form .message {
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+}
+main section form button {
+  padding: 10px 40px;
+  background-color: #017fed;
+  color: white;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+}
+main section .map {
+  width: 35%;
+  background-color: rgb(31, 31, 31);
+  display: flex; /* Use flex display */
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 10px;
+}
+main section .map .inside {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  /* align-items: center; */
+}
+main section .map .inside::before {
+  content: "";
+  flex-grow: 1;
+}
+main section .map img {
+  width: 100%;
+}

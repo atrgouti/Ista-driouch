@@ -1,0 +1,38 @@
+main {
+  width: 100%;
+  /* max-width: 1800px; */
+}
+
+/* working on the image and details section  */
+main header {
+  width: 80%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+}
+main header img {
+  width: 70%;
+  max-width: 1600px;
+}
+@media screen and (max-width: 700px) {
+  main header {
+    width: 100%;
+  }
+  main header img {
+    width: 90%;
+  }
+}
+/* working on the main section where are the details  */
+main section {
+  width: 90%;
+  margin: 30px auto;
+  max-width: 1800px;
+}
+main section h1 {
+  font-weight: bold;
+}
+main section .description {
+  width: 100%;
+  margin-top: 30px;
+  line-height: 30px;
+}

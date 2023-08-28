@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Poppins:ital,wght@0,300;1,200&family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+footer {
+  width: 100%;
+  background-color: rgb(234, 234, 234);
+}
+footer .contactUs {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  height: 100%;
+  max-width: 1800px;
+}
+.logoForm {
+  width: 70%;
+  height: 100%;
+}
+.logoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.logoForm img {
+  width: 100px;
+  margin: 30px 0px;
+}
+.logoForm p {
+  width: 40%;
+  margin-bottom: 30px;
+  color: rgb(36, 36, 36);
+}
+.logoForm button {
+  width: fit-content;
+  padding: 15px 40px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  background-color: #0470cc;
+  color: white;
+  font-size: 16px;
+  border: 0px;
+  border-radius: 10px;
+}
+.logoForm a {
+  text-decoration: none;
+  color: white;
+}
+.logoForm button:hover {
+  background-color: #035fb0;
+}
+.contactInfo {
+  width: 30%;
+  background-color: #0470cc;
+  display: flex; /* Use flex display */
+  align-items: flex-start;
+  flex-direction: column;
+}
+.contactInfo .inside {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  /* align-items: center; */
+}
+.contactInfo .inside::before {
+  content: "";
+  flex-grow: 1;
+}
+.contactInfo .inside .number {
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  color: white;
+  align-items: center;
+}
+.contactInfo .inside .number img {
+  height: 40px;
+  margin: 10px;
+}
+.contactInfo .inside .number .numi {
+  font-size: 20px;
+}
+.contactInfo .inside .line {
+  width: 80%;
+  margin: 0px auto;
+  height: 1px;
+  background-color: white;
+}
+.contactInfo .social {
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 30px;
+  color: gainsboro;
+}
+.contactInfo .social span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contactInfo .social span p {
+  padding-left: 10px;
+}
+.contactInfo .social span img {
+  height: 20px;
+}
+.contactInfo .social .socialmedia {
+  display: flex;
+}
+.contactInfo .social .socialmedia img {
+  height: 22px;
+  margin-bottom: 30px;
+}
+.contactInfo .social .socialmedia .linkdin {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .contactUs {
+    flex-direction: column;
+    width: 100%;
+  }
+  .logoForm {
+    justify-content: center;
+    width: 100%;
+  }
+  .logoForm p {
+    width: 90%;
+  }
+  .contactUs .contactInfo {
+    width: 100%;
+  }
+  footer .contactUs {
+    margin-bottom: 20px;
+  }
+}
+.copyRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(222, 222, 222);
+}
+.copyRight p {
+  padding: 20px;
+}
