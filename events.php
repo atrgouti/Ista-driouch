@@ -1,3 +1,4 @@
+<?php include './connexion.php'?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,82 +17,57 @@
       </div>
     </div>
     <div class="events-area">
-      <div class="latest-event">
-        <div class="photo">
-          <a href="eventsDetails.php"><img src="./eventsPhotos/girlssmiling.jpg" alt=""></a>
+    <?php
+      $sql = 'SELECT * FROM evenement ORDER BY ide DESC LIMIT 1';
+      $res = $db->prepare($sql);
+      $res->execute();
+      while($donne = $res->fetch()){
+        echo "
+        <div class='latest-event'>
+        <div class='photo'>
+          <a href='eventsDetails.php?id=$donne[ide]'><img src='./eventsPhotos/$donne[imagee]' alt=''></a>
         </div>
-        <div class="content">
-          <h1><a href="eventsDetails.php">Newcomers Welcome Party</a></h1>
-          <div class="datetime">
-            <p>July 11, 2018</p>
-            <p class='time'>7:00 am - 6:00 pm</p>
+        <div class='content'>
+          <h1><a href='eventsDetails.php?id=$donne[ide]'>$donne[titree]</a></h1>
+          <div class='datetime'>
+            <p>$donne[datee]</p>
+            <p class='time'>$donne[time]</p>
           </div>
-          <p class='description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p class='description'>$donne[descriptione]</p>
         </div>
       </div>
+        ";
+      }
+      ?>
+      
     </div>
     <div class="allEvents-area">
       <div class="allEvents">
-        <div class="event-box">
-          <div class="photo">
-            <a href="eventsDetails.php"><img src="mynews.jpg" alt=""></a>
-          </div>
-          <div class="content">
-            <div class="all-my-content">
-              <h3><a href="eventsDetails.php">Various versions have evolved over the years</a></h3>
-              <div class="datetime">
-                <p>July 11, 2018</p>
-                <p class='time'>7:00 am - 6:00 pm</p>
+         <?php
+          $sql = 'SELECT * FROM evenement ORDER BY ide DESC LIMIT 9999999999999999999 OFFSET 1;';
+          $res = $db->prepare($sql);
+          $res->execute();
+          while($donne = $res->fetch()){
+            echo "
+            <div class='event-box'>
+              <div class='photo'>
+                <a href='eventsDetails.php?id=$donne[ide]'><img src='./eventsPhotos/$donne[imagee]' alt=''></a>
               </div>
-              <p class='description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-          </div>
-        </div>
-        <div class="event-box">
-          <div class="photo">
-            <a href="eventsDetails.php"><img src="mynews.jpg" alt=""></a>
-          </div>
-          <div class="content">
-            <div class="all-my-content">
-              <h3><a href="eventsDetails.php">Various versions have evolved over the years</a></h3>
-              <div class="datetime">
-                <p>July 11, 2018</p>
-                <p class='time'>7:00 am - 6:00 pm</p>
+              <div class='content'>
+                <div class='all-my-content'>
+                  <h3><a href='eventsDetails.php?id=$donne[ide]'>$donne[titree]</a></h3>
+                  <div class='datetime'>
+                    <p>$donne[datee]</p>
+                    <p class='time'>$donne[time]</p>
+                  </div>
+                  <p class='description'>$donne[descriptione]</p>
+                </div>
               </div>
-              <p class='description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
-          </div>
-        </div>
-        <div class="event-box">
-          <div class="photo">
-            <a href="eventsDetails.php"><img src="mynews.jpg" alt=""></a>
-          </div>
-          <div class="content">
-            <div class="all-my-content">
-              <h3><a href="eventsDetails.php">Various versions have evolved over the years</a></h3>
-              <div class="datetime">
-                <p>July 11, 2018</p>
-                <p class='time'>7:00 am - 6:00 pm</p>
-              </div>
-              <p class='description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-          </div>
-        </div>
-        <div class="event-box">
-          <div class="photo">
-            <a href="eventsDetails.php"><img src="mynews.jpg" alt=""></a>
-          </div>
-          <div class="content">
-            <div class="all-my-content">
-              <h3><a href="eventsDetails.php">Various versions have evolved over the years</a></h3>
-              <div class="datetime">
-                <p>July 11, 2018</p>
-                <p class='time'>7:00 am - 6:00 pm</p>
-              </div>
-              <p class='description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-          </div>
-        </div>
+            ";
+          }
+      ?>
+  
       </div>
     </div>
     <?php include './footer.php' ?>

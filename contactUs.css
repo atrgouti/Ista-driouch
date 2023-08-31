@@ -80,7 +80,6 @@ main section form button {
 }
 main section .map {
   width: 35%;
-  background-color: rgb(31, 31, 31);
   display: flex; /* Use flex display */
   align-items: flex-start;
   flex-direction: column;
@@ -99,4 +98,18 @@ main section .map .inside::before {
 }
 main section .map img {
   width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  main section form {
+    width: 100%;
+  }
+  main section .map {
+    width: 100%;
+  }
 }

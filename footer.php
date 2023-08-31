@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <footer>
@@ -30,16 +31,21 @@
             <div class="line"></div>
             <div class="social">
               <span>
-                <img src="./homePhotos/email.png" alt="" />
+                <i class="fa-solid fa-envelope"></i>
                 <p>istadriouch@gmail.com</p>
               </span>
               <span>
-                <img src="./homePhotos/home.png" alt="" />
+                <i class="fa-solid fa-house"></i>
                 <p>Hay Al Amal 01, Driouch</p>
               </span>
+        
+              <div class="about">
+              <a href="./about.php"><p>About Us</p></a>
+              </div>
               <div class="socialmedia">
-                <img src="homePhotos/facebook-icon.png" alt="" />
-                <img class="linkdin" src="homePhotos/linkdin.png" alt="" />
+                <a href="https://www.facebook.com/istadriouch" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/ista.driouch/?fbclid=IwAR19VwpS6F-0PhI1hf_JDcf8Hwq6kiOARLueOG6ozs8-O5TUXTI14tZkr00" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/ista-driouch/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
           </div>

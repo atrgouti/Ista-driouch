@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- <link rel="stylesheet" href="./navStyle.css" /> -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Poppins:ital,wght@0,300;1,200&family=Roboto:wght@300;400&display=swap");
@@ -43,9 +44,8 @@
   color: white;
   margin: 0px 20px;
 }
-.callUs img {
-  height: 25px;
-  background-color: #005199;
+.callUs i {
+  font-size: 20px;
   padding: 5px;
   margin: 10px;
 }
@@ -54,9 +54,8 @@
   align-items: center;
   color: white;
 }
-.emailUs img {
-  height: 25px;
-  background-color: #005199;
+.emailUs i{
+  font-size: 20px;
   padding: 5px;
   margin: 10px;
 }
@@ -200,7 +199,7 @@ nav ul li a:hover::before {
   color: rgb(224, 222, 222);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 950px) {
   .fullLogoArea {
     display: none;
   }
@@ -234,15 +233,16 @@ nav ul li a:hover::before {
             <img src="./istalogo.png" alt="" />
           </div>
           <div class="schoolInfo">
-            <div class="callUs">
-              <img src="./Navphotos/icons8-call-50 (1).png" alt="" />
+            <div class="callUs" style='color: white;'>
+              <!-- <img src="./Navphotos/icons8-call-50 (1).png" alt="" /> -->
+              <i class="fa-solid fa-phone"></i>
               <div class="info">
                 <p>Call Us</p>
                 <p style="font-size: 18px">0652876984</p>
               </div>
             </div>
-            <div class="emailUs">
-              <img src="./Navphotos/icons8-email-50.png" alt="" />
+            <div class="emailUs" style='color: white;'>
+              <i class="fa-solid fa-envelope"></i>
               <div class="info">
                 <p>Email Us</p>
                 <p style="font-size: 18px">istadriouch@gmail.com</p>
@@ -255,12 +255,12 @@ nav ul li a:hover::before {
         <img class="logo" src="./Navphotos/BlueLogo.png" alt="" />
         <ul>
           <li><a href="home.php">Home</a></li>
-          <li><a href="#">Courses</a></li>
+          <li><a href="./cours.php">Courses</a></li>
           <li><a href="./news.php">News</a></li>
           <li><a href="./events.php">Events</a></li>
-          <li><a href="#">Calendars</a></li>
-          <li><a href="#">Inscription</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="./emploi-de-temps.php">Calendars</a></li>
+          <li><a href="./inscription.php">Inscription</a></li>
+          <li><a href="./contactUs.php">Contact Us</a></li>
         </ul>
         <img class="openMenu" src="./Navphotos/icons8-menu-50 (1).png" alt="" />
       </nav>
@@ -269,48 +269,61 @@ nav ul li a:hover::before {
         <div class="links">
           <ul>
             <li><a href="home.php">Home</a></li>
-            <li><a href="#">Courses</a></li>
+            <li><a href="./cours.php">Courses</a></li>
             <li><a href="./news.php">News</a></li>
             <li><a href="./events.php">Events</a></li>
-            <li><a href="#">Calendars</a></li>
-            <li><a href="#">Inscription</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="./emploi-de-temps.php">Calendars</a></li>
+            <li><a href="./inscription.php">Inscription</a></li>
+            <li><a href="./contactUs.php">Contact Us</a></li>
           </ul>
         </div>
         <div class="latestNews">
           <h3>Latest News</h3>
           <div class="line"></div>
-          <a href="#">
-            <div class="newNews">
-              <img src="./Navphotos/holiday.jpg" alt="" />
-              <div class="newsInfo">
-                <h4>New Holiday is comming</h4>
-                <p>Learning, library</p>
+          <?php
+          include('connexion.php');
+          $sql = 'SELECT * FROM actualite ORDER BY idac DESC LIMIT 3';
+          $res = $db->prepare($sql);
+          $res->execute();
+          while($donne = $res->fetch()){
+            echo "
+            <a href='newsDetails.php?id=$donne[idac]'>
+            <div class='newNews'>
+              <img src='./newsPhotos/$donne[imageac]' alt='' />
+              <div class='newsInfo'>
+                <h4>$donne[titreac]</h4>
+                <p>$donne[datea]</p>
               </div>
             </div>
-          </a>
-          <a href="#">
-            <div class="newNews">
-              <img src="./Navphotos/vecation.jpg" alt="" />
-              <div class="newsInfo">
-                <h4>AI Feild has been added</h4>
-                <p>Learning, AI</p>
-              </div>
-            </div>
-          </a>
+            </a>
+            ";
+          }
+          ?>
+          
         </div>
         <div class="latestNews">
           <h3>Latest Events</h3>
           <div class="line"></div>
-          <a href="#">
-            <div class="newNews">
-              <img src="./Navphotos/freelance.jpg" alt="" />
-              <div class="newsInfo">
-                <h4>Freelance Event Next Week</h4>
-                <p>Freelance</p>
+          <?php
+          include('connexion.php');
+          $sql = 'SELECT * from evenement ORDER by ide DESC LIMIT 3';
+          $res = $db->prepare($sql);
+          $res->execute();
+          while($donne = $res->fetch()){
+            echo "
+            <a href='eventsDetails.php?id=$donne[ide]'>
+            <div class='newNews'>
+              <img src='./eventsPhotos/$donne[imagee]' alt='' />
+              <div class='newsInfo'>
+                <h4>$donne[titree]</h4>
+                <p>$donne[datee]</p>
               </div>
             </div>
-          </a>
+            </a>
+            ";
+          }
+          ?>
+          
         </div>
       </div>
     </div>

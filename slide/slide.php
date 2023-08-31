@@ -59,15 +59,20 @@
     </head>
     <body>
     <div class='slide'>
-  
-      <div class='mySlides fade'>
+      <?php
+      include('connexion.php');
+      $sql = 'SELECT * FROM diaporama';
+      $res = $db->prepare($sql);
+      $res->execute();
+      while($donne = $res->fetch()){
+        echo"
+        <div class='mySlides fade'>
+          <img src='slidePhotos/$donne[imaged]' width='100%'>
+        </div>
+        ";
+      }
+      ?>
       
-      <img src='homePhotos/slide1.png' width='100%'>
-    </div>
-    <div class='mySlides fade'>
-      <img src='homePhotos/slide2.png' width='100%'>
-     
-    </div>
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a> 
     </div>

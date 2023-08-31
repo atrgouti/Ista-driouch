@@ -76,6 +76,9 @@
   width: 90%;
   margin-top: 20px;
   color: rgb(112, 112, 112);
+  /* overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; */
 }
 .latest-event .content .readMore {
   margin-top: 20px;
@@ -151,6 +154,9 @@
   width: 90%;
   margin-top: 15px;
   margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .event-box .content .all-my-content .readMore {
   margin-bottom: 10px;

@@ -106,18 +106,40 @@ footer .contactUs {
 .contactInfo .social span p {
   padding-left: 10px;
 }
-.contactInfo .social span img {
-  height: 20px;
+.contactInfo .social span i {
+  color: white;
 }
 .contactInfo .social .socialmedia {
   display: flex;
+  font-size: white;
+  justify-content: center;
 }
-.contactInfo .social .socialmedia img {
-  height: 22px;
-  margin-bottom: 30px;
+.contactInfo .social .socialmedia a {
+  text-decoration: none;
+  color: white;
+}
+.contactInfo .social .socialmedia i {
+  font-size: 30px;
+  margin: 10px;
 }
 .contactInfo .social .socialmedia .linkdin {
   margin-left: 10px;
+}
+.contactInfo .about {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.contactInfo .about a {
+  text-decoration: none;
+  color: #0470cc;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.contactInfo .about p {
+  background-color: rgb(234, 234, 234);
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (max-width: 700px) {
